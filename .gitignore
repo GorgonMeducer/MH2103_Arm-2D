@@ -55,5 +55,5 @@ RTE_Components.h
 *@*
 Pre_Include_Global.h
 *.dep
-Objects/*
+Objects
 *.uvguix.*
