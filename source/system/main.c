@@ -37,8 +37,6 @@ int main(void)
     arm_2d_scene_player_switch_to_next_scene(&DISP0_ADAPTER);
     /*******************************************************************************/
 
-    SysTest();
-
     while (1) {
         disp_adapter0_task();
     }
