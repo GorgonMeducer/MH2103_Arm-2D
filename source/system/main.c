@@ -48,7 +48,8 @@ int main(void)
     disp_adapter0_init();
     /*******************************************************************************/	
     {//show demo
-        arm_2d_scene_filters_init(&DISP0_ADAPTER);
+        //arm_2d_scene_filters_init(&DISP0_ADAPTER);
+        arm_2d_scene_text_reader_init(&DISP0_ADAPTER);
     }
     /*******************************************************************************/	
 
