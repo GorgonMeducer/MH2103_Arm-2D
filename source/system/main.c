@@ -12,6 +12,8 @@
 #include "arm_2d_scene_knob.h"
 #include "arm_2d_scene_fan.h"
 #include "arm_2d_scene_watch.h"
+#include "arm_2d_scene_alarm_clock.h"
+#include "arm_2d_scene_fitness.h"
 
 static
 void SysTest(void);
@@ -32,7 +34,9 @@ int main(void)
         //arm_2d_scene_knob_init(&DISP0_ADAPTER);
         //arm_2d_scene_compass_init(&DISP0_ADAPTER);
         //arm_2d_scene_gas_gauge_init(&DISP0_ADAPTER);
-        arm_2d_scene_watch_init(&DISP0_ADAPTER);
+        //arm_2d_scene_watch_init(&DISP0_ADAPTER);
+        //arm_2d_scene_alarm_clock_init(&DISP0_ADAPTER);
+        arm_2d_scene_fitness_init(&DISP0_ADAPTER);
     }
     arm_2d_scene_player_switch_to_next_scene(&DISP0_ADAPTER);
     /*******************************************************************************/

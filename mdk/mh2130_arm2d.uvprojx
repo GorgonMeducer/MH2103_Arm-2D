@@ -314,7 +314,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>5</Optim>
+            <Optim>6</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -742,6 +742,16 @@
               <FileName>arm_2d_scene_watch.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\source\arm_2d_scene_watch.c</FilePath>
+            </File>
+            <File>
+              <FileName>arm_2d_scene_alarm_clock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\arm_2d_scene_alarm_clock.c</FilePath>
+            </File>
+            <File>
+              <FileName>arm_2d_scene_fitness.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\arm_2d_scene_fitness.c</FilePath>
             </File>
           </Files>
         </Group>
