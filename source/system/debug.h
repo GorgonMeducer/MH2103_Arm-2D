@@ -7,15 +7,23 @@
 	COPYRIGHT 2024 SHENZHEN HB TECHNOLOGY DEVELOPMENT CO.,LTD. 
 ************************************************************************/
 #ifndef __DEBUG_H__
-#define	__DEBUG_H__
+#define __DEBUG_H__
+
+#include <stdio.h>
 
 #ifdef DEBUG
-	extern void DebugPrintf(SINT8* str,...);
-	extern void DebugWriteHex(uint8_t *buf,uint32_t len);
+#if USE_STD_PRINTF
+#   define DebugPrintf printf
 #else
-	#define DebugPrintf(...)
-	#define DebugWriteHex(buf,len)
+extern void DebugPrintf(SINT8* str,...);
 #endif
+
+extern void DebugWriteHex(uint8_t *buf,uint32_t len);
+#else
+#   define DebugPrintf(...)
+#   define DebugWriteHex(buf,len)
+#endif
+
 #define RedBold             "\033[31;1m" // 红色加粗
 #define RedBoldBlink        "\033[31;1;5m" // 红色加粗、闪烁
 #define GreenBold             "\033[32;1m" // 绿色加粗
