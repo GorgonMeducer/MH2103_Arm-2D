@@ -9,37 +9,14 @@
 #include "arm_2d_example_controls.h"
 #include "arm_2d_demos.h"
 
+#include "arm_2d_scene_knob.h"
 
-extern void RCC_ClkConfiguration(void);
+
+static
 void SysTest(void);
 
 int main(void)
 {
-    RCC_ClocksTypeDef clocks;
-
-    RCC_ClkConfiguration(); //reset mcu clock，for 216Mhz，default 72Mhz
-    RCC_GetClocksFreq(&clocks);
-    SystemCoreClockUpdate();
-    SysTick_Config(SystemCoreClock / 1000);	//1ms，定时器，延时函数都要用到systick，要最先初始化
-    Uart_debug_int();
-    DebugPrintf("SYSCLK: %3.1fMhz, \r\nHCLK: %3.1fMhz, \r\nPCLK1: %3.1fMhz, \r\nPCLK2: %3.1fMhz, \r\nADCCLK: %3.1fMhz\r\n",
-    (float)clocks.SYSCLK_Frequency/1000000, (float)clocks.HCLK_Frequency/1000000,
-    (float)clocks.PCLK1_Frequency/1000000, 	(float)clocks.PCLK2_Frequency / 1000000, 
-    (float)clocks.ADCCLK_Frequency / 1000000);
-
-    DebugPrintf("system clock = %dHz,%dMhz\r\n",SystemCoreClock,SystemCoreClock/1000/1000);
-    sFLASH_Init();
-    LoadSystemConfig(); //要放到最前面，其他初始化依赖配置信息
-    guiInit(); //gui初始要放到osalinit前面。
-    //	OsalInit();
-    BuzzerInit();
-    KeyInit();
-    mcuUartInit();
-    Timer2Init();	//基于该定时器的调度的应用要先初始化
-    Timer3Init();	//超时定时器
-    BeepOnce();
-    WatchDogInit();
-    guiBacklightOnoff(guiGetDC(GUI_DC_MAIN),LCD_BACKLIGHT_ON); //open backlight
     init_cycle_counter(true); //don't init systick
 
     arm_irq_safe {
@@ -50,13 +27,19 @@ int main(void)
     {//show demo
         //arm_2d_scene_filters_init(&DISP0_ADAPTER);
         arm_2d_scene_text_reader_init(&DISP0_ADAPTER);
+        //arm_2d_scene_knob_init(&DISP0_ADAPTER);
+        //arm_2d_scene_compass_init(&DISP0_ADAPTER);
     }
+    arm_2d_scene_player_switch_to_next_scene(&DISP0_ADAPTER);
     /*******************************************************************************/	
 
     while (1) {
-        disp_adapter0_task();
+        disp_adapter0_task(30);
     }
 }
+
+
+
 //CCT6: LQFP48,flash = 256KB,ram=64K
 //RCT6: LQFP64,flash = 256KB,ram=64K
 //AVGT6: LQFP100,flash = 1024KB,ram=96K

@@ -119,8 +119,7 @@ static void Lcd1_Mcu8_WriteData(HCOLOR *psrc,uint32_t len)
 
     LCD1_DC_HIGH();
     LCD1_CS_LOW();
-    while(u8Len--)
-    {
+    do {
         uint8_t h,l;
         uint16_t d;
         d = *psrc++;
@@ -136,13 +135,13 @@ static void Lcd1_Mcu8_WriteData(HCOLOR *psrc,uint32_t len)
         Lcd1_Mcu8_WriteByte(g);     //先写高8bit
         Lcd1_Mcu8_WriteByte(b);     //先写高8bit	
     #else
-        h = (uint8_t)((d >> 8) & 0xFF);	
+        h = (uint8_t)(d >> 8);
         Lcd1_Mcu8_WriteByte(h);     //先写高8bit
-        l = (uint8_t)(d  & 0xFF);
+        l = (uint8_t)(d & 0xFF);
         Lcd1_Mcu8_WriteByte(l);     //再写低8bit	
     #endif
-    }
-    LCD1_CS_HIGH();	
+    } while(--u8Len);
+    LCD1_CS_HIGH();
 }
 //写同一个颜色的显示数据
 static void Lcd1_Mcu8_WriteColor(HCOLOR color,uint32_t len)
@@ -165,8 +164,7 @@ static void Lcd1_Mcu8_WriteColor(HCOLOR color,uint32_t len)
     #endif
     LCD1_DC_HIGH();
     LCD1_CS_LOW();
-    while(len--)
-    {
+    do {
     #ifdef MCU18BIT
         Lcd1_Mcu8_WriteByte(r);     //先写高8bit
         Lcd1_Mcu8_WriteByte(g);     //先写高8bit
@@ -175,7 +173,7 @@ static void Lcd1_Mcu8_WriteColor(HCOLOR color,uint32_t len)
         Lcd1_Mcu8_WriteByte(h);     //先写高8bit
         Lcd1_Mcu8_WriteByte(l);     //再写低8bit
     #endif
-    }
+    } while(--len);
     LCD1_CS_HIGH();
 }
 //背光控制

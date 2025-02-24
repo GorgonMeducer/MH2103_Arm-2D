@@ -3,6 +3,8 @@
 #include "stdint.h"
 #include "config.h"
 
+#include "perf_counter.h"
+
 #ifdef __cplusplus
  extern "C" {
 #endif /* __cplusplus */
@@ -60,7 +62,7 @@ typedef struct lcdDriver{
 }DRVLCD;
 
 //专用于lcd底层的延时函数(阻塞类型的)
-#define LCD_Delay(ms)			DelayMs(ms)
+#define LCD_Delay(ms)			delay_ms(ms)
 
 //注册lcd1的mcu 8bit驱动接口
 //DRVLCD:驱动管理接口

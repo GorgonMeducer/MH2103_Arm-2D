@@ -118,70 +118,70 @@ __Vectors       DCD     __initial_sp               ; Top of Stack
                 DCD     DMA2_Channel2_IRQHandler   ; DMA2 Channel2
                 DCD     DMA2_Channel3_IRQHandler   ; DMA2 Channel3
                 DCD     DMA2_Channel4_5_IRQHandler ; DMA2 Channel4 & Channel5
-				DCD     0                          ; Reserved
-				DCD     0                          ; Reserved
-				DCD     0                          ; Reserved
-				DCD     0                          ; Reserved
-				DCD     0                          ; Reserved	
-				DCD     0                          ; Reserved
-				DCD     0                          ; Reserved
-				DCD     0                          ; Reserved					
+                DCD     0                          ; Reserved
+                DCD     0                          ; Reserved
+                DCD     0                          ; Reserved
+                DCD     0                          ; Reserved
+                DCD     0                          ; Reserved
+                DCD     0                          ; Reserved
+                DCD     0                          ; Reserved
+                DCD     0                          ; Reserved
                 DCD     SYMC_IRQHandler
                 DCD     RNG_IRQHandler 
                 DCD     SENSOR_IRQHandler
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0		
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0		
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0		
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0		
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0		
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0		
-				DCD		0
-				DCD		0
-				DCD		0
-				DCD		0		
-				DCD		0
-				DCD		0
-				DCD		0
-				;DCD		0X20005000
-                ;DCD     BOOT_RAM
-					
-					
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                DCD     0
+                ;DCD        0X20005000
+                ;DCD        BOOT_RAM
+                    
+                    
 __Vectors_End
 
 __Vectors_Size  EQU  __Vectors_End - __Vectors
@@ -189,7 +189,7 @@ __Vectors_Size  EQU  __Vectors_End - __Vectors
                 AREA    |.text|, CODE, READONLY
                 
 ;
-BOOT_RAM  		PROC
+BOOT_RAM        PROC
                 EXPORT  BOOT_RAM             [WEAK]
                 IMPORT  __main
                 IMPORT  SystemInit
@@ -197,8 +197,8 @@ BOOT_RAM  		PROC
                 BLX     R0               
                 LDR     R0, =__main
                 BX      R0
-                ENDP			
-				
+                ENDP
+
 ; Reset handler
 Reset_Handler   PROC
                 EXPORT  Reset_Handler             [WEAK]

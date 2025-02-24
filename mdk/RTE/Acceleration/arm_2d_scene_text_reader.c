@@ -240,8 +240,8 @@ IMPL_PFB_ON_DRAW(__pfb_draw_scene_text_reader_handler)
 
             arm_2d_dock_with_margin(__dock_region, 10) {
 
-                //arm_lcd_text_set_char_spacing(-1);
-                //arm_lcd_text_set_line_spacing(-2);
+                arm_lcd_text_set_char_spacing(1);
+                arm_lcd_text_set_line_spacing(4);
 
                 text_box_show(  &this.tTextPanel, 
                                 ptTile, 
@@ -328,8 +328,8 @@ user_scene_text_reader_t *__arm_2d_scene_text_reader_init(   arm_2d_scene_player
                 .pTarget    = (uintptr_t)&this.tStringReader,
             },
             .u2LineAlign = TEXT_BOX_LINE_ALIGN_JUSTIFIED,
-            //.fScale = 0.8f,
-            //.chSpaceBetweenParagraph = 20,
+            //.fScale = 1.0f,
+            .chSpaceBetweenParagraph = 20,
 
             .ptScene = (arm_2d_scene_t *)ptThis,
             .bUseDirtyRegions = true,
