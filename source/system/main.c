@@ -47,6 +47,7 @@ int main(void)
 //CCT6: LQFP48,flash = 256KB,ram=64K
 //RCT6: LQFP64,flash = 256KB,ram=64K
 //AVGT6: LQFP100,flash = 1024KB,ram=96K
+static
 void SysTest(void)
 {
     volatile uint32_t t,id1,id2,id3;
