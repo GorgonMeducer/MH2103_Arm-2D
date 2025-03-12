@@ -14,6 +14,8 @@
 #include "arm_2d_scene_watch.h"
 #include "arm_2d_scene_alarm_clock.h"
 #include "arm_2d_scene_fitness.h"
+#include "arm_2d_scene_histogram.h"
+#include "arm_2d_scene_meter.h"
 
 static
 void SysTest(void);
@@ -34,9 +36,12 @@ int main(void)
         //arm_2d_scene_knob_init(&DISP0_ADAPTER);
         //arm_2d_scene_compass_init(&DISP0_ADAPTER);
         //arm_2d_scene_gas_gauge_init(&DISP0_ADAPTER);
-        //arm_2d_scene_watch_init(&DISP0_ADAPTER);
+        arm_2d_scene_watch_init(&DISP0_ADAPTER);
         //arm_2d_scene_alarm_clock_init(&DISP0_ADAPTER);
-        arm_2d_scene_fitness_init(&DISP0_ADAPTER);
+        //arm_2d_scene_fitness_init(&DISP0_ADAPTER);
+        //arm_2d_scene_tjpgd_init(&DISP0_ADAPTER);
+        //arm_2d_scene_histogram_init(&DISP0_ADAPTER);
+        //arm_2d_scene_meter_init(&DISP0_ADAPTER);
     }
     arm_2d_scene_player_switch_to_next_scene(&DISP0_ADAPTER);
     /*******************************************************************************/
@@ -45,7 +50,6 @@ int main(void)
         disp_adapter0_task();
     }
 }
-
 
 
 //CCT6: LQFP48,flash = 256KB,ram=64K
