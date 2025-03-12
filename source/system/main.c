@@ -17,6 +17,10 @@
 #include "arm_2d_scene_histogram.h"
 #include "arm_2d_scene_meter.h"
 
+#if defined(RTE_Acceleration_Arm_2D_Extra_Benchmark)
+#   include "arm_2d_benchmark.h"
+#endif
+
 static
 void SysTest(void);
 
@@ -28,6 +32,9 @@ int main(void)
         arm_2d_init();
     }
     disp_adapter0_init();
+#if defined(RTE_Acceleration_Arm_2D_Extra_Benchmark)
+    arm_2d_run_benchmark();
+#else
     /*******************************************************************************/
     {//show demo
         //arm_2d_scene_filters_init(&DISP0_ADAPTER);
@@ -45,6 +52,7 @@ int main(void)
     }
     arm_2d_scene_player_switch_to_next_scene(&DISP0_ADAPTER);
     /*******************************************************************************/
+#endif
 
     while (1) {
         disp_adapter0_task();
