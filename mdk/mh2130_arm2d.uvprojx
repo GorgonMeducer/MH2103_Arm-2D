@@ -768,6 +768,21 @@
               <FileType>1</FileType>
               <FilePath>..\source\MeterPanel.c</FilePath>
             </File>
+            <File>
+              <FileName>jntm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\jntm.c</FilePath>
+            </File>
+            <File>
+              <FileName>arm_2d_scene_jntm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\arm_2d_scene_jntm.c</FilePath>
+            </File>
+            <File>
+              <FileName>arm_2d_scene_jntm.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\source\arm_2d_scene_jntm.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -826,19 +841,19 @@
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </component>
-      <component Cclass="Acceleration" Cgroup="Arm-2D Extras" Csub="Controls" Cvendor="ARM" Cversion="2.4.5" condition="Arm-2D-Controls">
+      <component Cclass="Acceleration" Cgroup="Arm-2D Extras" Csub="Controls" Cvendor="ARM" Cversion="2.4.6" condition="Arm-2D-Controls">
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </component>
-      <component Cclass="Acceleration" Cgroup="Arm-2D Extras" Csub="LCD ASCII Printf" Cvendor="ARM" Cversion="2.10.2" condition="Arm-2D-Printf">
+      <component Cclass="Acceleration" Cgroup="Arm-2D Extras" Csub="LCD ASCII Printf" Cvendor="ARM" Cversion="2.10.3" condition="Arm-2D-Printf">
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </component>
-      <component Cclass="Acceleration" Cgroup="Arm-2D Extras" Csub="TJpgDec Loader" Cvendor="ARM" Cversion="0.9.5" condition="Arm-2D-TJpgDec-Loader">
+      <component Cclass="Acceleration" Cgroup="Arm-2D Extras" Csub="Loaders" Cvendor="ARM" Cversion="1.0.0" condition="Arm-2D-Loaders">
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
@@ -1092,7 +1107,7 @@
       </file>
       <file attr="config" category="header" name="examples\common\loader\tjpgd_loader\arm_tjpgd_cfg.h" version="1.0.0">
         <instance index="0">RTE\Acceleration\arm_tjpgd_cfg.h</instance>
-        <component Cclass="Acceleration" Cgroup="Arm-2D Extras" Csub="TJpgDec Loader" Cvendor="ARM" Cversion="0.9.5" condition="Arm-2D-TJpgDec-Loader"/>
+        <component Cclass="Acceleration" Cgroup="Arm-2D Extras" Csub="Loaders" Cvendor="ARM" Cversion="1.0.0" condition="Arm-2D-Loaders"/>
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>

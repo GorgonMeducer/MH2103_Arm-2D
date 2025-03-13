@@ -16,6 +16,7 @@
 #include "arm_2d_scene_fitness.h"
 #include "arm_2d_scene_histogram.h"
 #include "arm_2d_scene_meter.h"
+#include "arm_2d_scene_jntm.h"
 
 #if defined(RTE_Acceleration_Arm_2D_Extra_Benchmark)
 #   include "arm_2d_benchmark.h"
@@ -49,6 +50,7 @@ int main(void)
         //arm_2d_scene_tjpgd_init(&DISP0_ADAPTER);
         //arm_2d_scene_histogram_init(&DISP0_ADAPTER);
         //arm_2d_scene_meter_init(&DISP0_ADAPTER);
+        //arm_2d_scene_jntm_init(&DISP0_ADAPTER);
     }
     arm_2d_scene_player_switch_to_next_scene(&DISP0_ADAPTER);
     /*******************************************************************************/
