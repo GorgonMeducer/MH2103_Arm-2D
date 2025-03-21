@@ -52,6 +52,7 @@ int main(void)
         //arm_2d_scene_meter_init(&DISP0_ADAPTER);
         //arm_2d_scene_user_defined_opcode_init(&DISP0_ADAPTER);
         //arm_2d_scene_jntm_init(&DISP0_ADAPTER);
+        //arm_2d_scene_watch_face_01_init(&DISP0_ADAPTER);
     }
     arm_2d_scene_player_switch_to_next_scene(&DISP0_ADAPTER);
     /*******************************************************************************/

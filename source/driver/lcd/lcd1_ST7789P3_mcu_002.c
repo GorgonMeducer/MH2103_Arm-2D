@@ -26,6 +26,8 @@ void lcd_St7789P3_mcu_001_init(DRVLCD *pLcd)
 #define Delay(x) LCD_Delay(x)
 static void lcdControlerInit(DRVLCD *pLcd)
 {
+    WriteComm( 0x01);
+    LCD_Delay(120);
     WriteComm( 0x11);     
     LCD_Delay(50);
     WriteComm( 0x36);     
@@ -60,7 +62,7 @@ static void lcdControlerInit(DRVLCD *pLcd)
     //WriteData( 0x20);   //VDV, 0x20:0v
 
     WriteComm( 0xC6);     
-    WriteData( 0x0F);   //0x0F:60Hz   
+    WriteData( 0x00);   //0x0F:60Hz   
 
     WriteComm( 0xD0);     
     WriteData( 0xA4);   
