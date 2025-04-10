@@ -151,7 +151,7 @@ extern "C" {
 // <i> Configure the default navigation layer of this display adapter. 
 // <i> NOTE: Disable the navigation layer will also remove the real-time FPS display.
 #ifndef __DISP0_CFG_NAVIGATION_LAYER_MODE__
-#   define __DISP0_CFG_NAVIGATION_LAYER_MODE__                     0
+#   define __DISP0_CFG_NAVIGATION_LAYER_MODE__                     1
 #endif
 
 // <o>Number of iterations <0-2000>
@@ -178,7 +178,7 @@ extern "C" {
 // <o> Console Input Buffer Size
 // <i> The size of console input buffer, 0 means no input buffer
 #ifndef __DISP0_CFG_CONSOLE_INPUT_BUFFER__
-#   define __DISP0_CFG_CONSOLE_INPUT_BUFFER__                       255
+#   define __DISP0_CFG_CONSOLE_INPUT_BUFFER__                       1024
 #endif
 
 // <o> Console Display Time in ms <1000-0xFFFFFFFF>

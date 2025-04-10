@@ -58,8 +58,12 @@ int main(void)
     /*******************************************************************************/
 #endif
 
+#if defined(__PERF_COUNTER_COREMARK__)
+    coremark_main();
+#endif
+
     while (1) {
-        disp_adapter0_task();
+        while(arm_fsm_rt_cpl !=disp_adapter0_task());
     }
 }
 

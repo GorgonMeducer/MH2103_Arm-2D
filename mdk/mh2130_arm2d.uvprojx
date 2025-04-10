@@ -338,7 +338,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_STDPERIPH_DRIVER</Define>
+              <Define>USE_STDPERIPH_DRIVER,ITERATIONS=7000</Define>
               <Undefine></Undefine>
               <IncludePath>..\Libraries\MH210xLib\inc;..\Libraries\CORE;..\source\driver;..\source\driver\lcd;..\source\driver\modbus;..\source\driver\uart;..\source\system;..\source\application\arm2d_scene;..\Libraries\MH210xLib\lib;..\source\gui;..\source</IncludePath>
             </VariousControls>
@@ -841,25 +841,25 @@
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </component>
-      <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.0.0" condition="Arm-2D-Demos">
+      <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.1.1" condition="Arm-2D-Demos">
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </component>
-      <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="Watch Face 01" Cvendor="ARM" Cversion="1.1.3" condition="Arm-2D-Demos">
+      <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="Watch Face 01" Cvendor="ARM" Cversion="1.2.0" condition="Arm-2D-Demos">
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </component>
-      <component Cclass="Acceleration" Cgroup="Arm-2D Extras" Csub="Controls" Cvendor="ARM" Cversion="2.4.6" condition="Arm-2D-Controls">
+      <component Cclass="Acceleration" Cgroup="Arm-2D Extras" Csub="Controls" Cvendor="ARM" Cversion="2.5.0" condition="Arm-2D-Controls">
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </component>
-      <component Cclass="Acceleration" Cgroup="Arm-2D Extras" Csub="LCD ASCII Printf" Cvendor="ARM" Cversion="2.10.3" condition="Arm-2D-Printf">
+      <component Cclass="Acceleration" Cgroup="Arm-2D Extras" Csub="LCD ASCII Printf" Cvendor="ARM" Cversion="2.11.0" condition="Arm-2D-Printf">
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
@@ -871,13 +871,13 @@
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </component>
-      <component Cclass="Acceleration" Cgroup="Arm-2D Helper" Csub="Display Adapter" Cvendor="ARM" Cversion="3.3.2" condition="Arm-2D-Displayer-Adapter" maxInstances="8">
+      <component Cclass="Acceleration" Cgroup="Arm-2D Helper" Csub="Display Adapter" Cvendor="ARM" Cversion="3.3.8" condition="Arm-2D-Displayer-Adapter" maxInstances="8">
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </component>
-      <component Cclass="Acceleration" Cgroup="Arm-2D Helper" Csub="PFB" Cvendor="ARM" Cversion="2.5.6" condition="Arm-2D-CORE">
+      <component Cclass="Acceleration" Cgroup="Arm-2D Helper" Csub="PFB" Cvendor="ARM" Cversion="2.5.10" condition="Arm-2D-CORE">
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
@@ -939,9 +939,9 @@
       </component>
     </components>
     <files>
-      <file attr="config" category="sourceC" name="examples\demos\Battleship.c" version="2.0.0">
+      <file attr="config" category="sourceC" name="examples\demos\Battleship.c" version="2.1.1">
         <instance index="0">RTE\Acceleration\Battleship.c</instance>
-        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.0.0" condition="Arm-2D-Demos"/>
+        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.1.1" condition="Arm-2D-Demos"/>
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
@@ -955,7 +955,7 @@
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </file>
-      <file attr="config" category="preIncludeGlobal" name="Library\Include\template\arm_2d_cfg.h" version="1.3.12">
+      <file attr="config" category="preIncludeGlobal" name="Library\Include\template\arm_2d_cfg.h" version="1.4.0">
         <instance index="0">RTE\Acceleration\arm_2d_cfg.h</instance>
         <component Cclass="Acceleration" Cgroup="Arm-2D" Csub="Core" Cvendor="ARM" Cversion="1.2.2-dev" condition="CMSIS-DSP"/>
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
@@ -963,17 +963,17 @@
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </file>
-      <file attr="config" category="sourceC" name="Helper\template\arm_2d_disp_adapter.c" version="3.3.2">
+      <file attr="config" category="sourceC" name="Helper\template\arm_2d_disp_adapter.c" version="3.3.8">
         <instance index="0">RTE\Acceleration\arm_2d_disp_adapter_0.c</instance>
-        <component Cclass="Acceleration" Cgroup="Arm-2D Helper" Csub="Display Adapter" Cvendor="ARM" Cversion="3.3.2" condition="Arm-2D-Displayer-Adapter" maxInstances="8"/>
+        <component Cclass="Acceleration" Cgroup="Arm-2D Helper" Csub="Display Adapter" Cvendor="ARM" Cversion="3.3.8" condition="Arm-2D-Displayer-Adapter" maxInstances="8"/>
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </file>
-      <file attr="config" category="header" name="Helper\template\arm_2d_disp_adapter.h" version="3.3.2">
+      <file attr="config" category="header" name="Helper\template\arm_2d_disp_adapter.h" version="3.3.8">
         <instance index="0">RTE\Acceleration\arm_2d_disp_adapter_0.h</instance>
-        <component Cclass="Acceleration" Cgroup="Arm-2D Helper" Csub="Display Adapter" Cvendor="ARM" Cversion="3.3.2" condition="Arm-2D-Displayer-Adapter" maxInstances="8"/>
+        <component Cclass="Acceleration" Cgroup="Arm-2D Helper" Csub="Display Adapter" Cvendor="ARM" Cversion="3.3.8" condition="Arm-2D-Displayer-Adapter" maxInstances="8"/>
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
@@ -1071,33 +1071,33 @@
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </file>
-      <file attr="config" category="sourceC" name="examples\demos\arm_2d_scene_user_defined_opcode.c" version="2.0.0">
+      <file attr="config" category="sourceC" name="examples\demos\arm_2d_scene_user_defined_opcode.c" version="2.1.1">
         <instance index="0">RTE\Acceleration\arm_2d_scene_user_defined_opcode.c</instance>
-        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.0.0" condition="Arm-2D-Demos"/>
+        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.1.1" condition="Arm-2D-Demos"/>
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </file>
-      <file attr="config" category="header" name="examples\demos\arm_2d_scene_user_defined_opcode.h" version="2.0.0">
+      <file attr="config" category="header" name="examples\demos\arm_2d_scene_user_defined_opcode.h" version="2.1.1">
         <instance index="0">RTE\Acceleration\arm_2d_scene_user_defined_opcode.h</instance>
-        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.0.0" condition="Arm-2D-Demos"/>
+        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.1.1" condition="Arm-2D-Demos"/>
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </file>
-      <file attr="config" category="sourceC" name="examples\demos\arm_2d_scene_watch_face_01.c" version="1.1.3">
+      <file attr="config" category="sourceC" name="examples\demos\arm_2d_scene_watch_face_01.c" version="1.2.0">
         <instance index="0">RTE\Acceleration\arm_2d_scene_watch_face_01.c</instance>
-        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="Watch Face 01" Cvendor="ARM" Cversion="1.1.3" condition="Arm-2D-Demos"/>
+        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="Watch Face 01" Cvendor="ARM" Cversion="1.2.0" condition="Arm-2D-Demos"/>
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
       </file>
-      <file attr="config" category="header" name="examples\demos\arm_2d_scene_watch_face_01.h" version="1.1.3">
+      <file attr="config" category="header" name="examples\demos\arm_2d_scene_watch_face_01.h" version="1.2.0">
         <instance index="0">RTE\Acceleration\arm_2d_scene_watch_face_01.h</instance>
-        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="Watch Face 01" Cvendor="ARM" Cversion="1.1.3" condition="Arm-2D-Demos"/>
+        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="Watch Face 01" Cvendor="ARM" Cversion="1.2.0" condition="Arm-2D-Demos"/>
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
@@ -1105,7 +1105,7 @@
       </file>
       <file attr="config" category="sourceC" name="examples\common\opcodes\arm_2d_user_opcode_draw_circle.c" version="1.0.0">
         <instance index="0">RTE\Acceleration\arm_2d_user_opcode_draw_circle.c</instance>
-        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.0.0" condition="Arm-2D-Demos"/>
+        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.1.1" condition="Arm-2D-Demos"/>
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
@@ -1113,7 +1113,7 @@
       </file>
       <file attr="config" category="header" name="examples\common\opcodes\arm_2d_user_opcode_draw_circle.h" version="1.0.0">
         <instance index="0">RTE\Acceleration\arm_2d_user_opcode_draw_circle.h</instance>
-        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.0.0" condition="Arm-2D-Demos"/>
+        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.1.1" condition="Arm-2D-Demos"/>
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
@@ -1121,7 +1121,7 @@
       </file>
       <file attr="config" category="sourceC" name="examples\common\opcodes\arm_2d_user_opcode_draw_line.c" version="1.2.1">
         <instance index="0">RTE\Acceleration\arm_2d_user_opcode_draw_line.c</instance>
-        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.0.0" condition="Arm-2D-Demos"/>
+        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.1.1" condition="Arm-2D-Demos"/>
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
@@ -1129,7 +1129,7 @@
       </file>
       <file attr="config" category="header" name="examples\common\opcodes\arm_2d_user_opcode_draw_line.h" version="1.2.1">
         <instance index="0">RTE\Acceleration\arm_2d_user_opcode_draw_line.h</instance>
-        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.0.0" condition="Arm-2D-Demos"/>
+        <component Cclass="Acceleration" Cgroup="Arm-2D Demos" Csub="User Defined OPCODE" Cvendor="ARM" Cversion="2.1.1" condition="Arm-2D-Demos"/>
         <package name="Arm-2D" schemaVersion="1.7.37" url="https://www.keil.com/pack/" vendor="ARM" version="9.9.99"/>
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
@@ -1158,6 +1158,18 @@
         <targetInfos>
           <targetInfo name="MH2103-for-arm2d"/>
         </targetInfos>
+      </file>
+      <file attr="config" category="sourceC" name="benchmark\coremark_port\core_portme.c" version="1.1.3">
+        <instance index="0" removed="1">RTE\Utilities\core_portme.c</instance>
+        <component Cclass="Utilities" Cgroup="perf_counter" Csub="Benchmark" Cvariant="Coremark" Cvendor="GorgonMeducer" Cversion="1.1.3" condition="perf_counter"/>
+        <package name="perf_counter" schemaVersion="1.7.37" url="https://raw.githubusercontent.com/GorgonMeducer/perf_counter/CMSIS-Pack/cmsis-pack/" vendor="GorgonMeducer" version="2.4.0"/>
+        <targetInfos/>
+      </file>
+      <file attr="config" category="header" name="benchmark\coremark_port\core_portme.h" version="1.1.3">
+        <instance index="0" removed="1">RTE\Utilities\core_portme.h</instance>
+        <component Cclass="Utilities" Cgroup="perf_counter" Csub="Benchmark" Cvariant="Coremark" Cvendor="GorgonMeducer" Cversion="1.1.3" condition="perf_counter"/>
+        <package name="perf_counter" schemaVersion="1.7.37" url="https://raw.githubusercontent.com/GorgonMeducer/perf_counter/CMSIS-Pack/cmsis-pack/" vendor="GorgonMeducer" version="2.4.0"/>
+        <targetInfos/>
       </file>
     </files>
   </RTE>
