@@ -329,7 +329,7 @@ user_scene_jntm_t *__arm_2d_scene_jntm_init(   arm_2d_scene_player_t *ptDispAdap
         extern const uint8_t c_chHeliumJPG[23656];
         extern const uint8_t c_chHelium75JPG[10685];
         extern const uint8_t c_chHelium30JPG[5411];
-        extern const uint8_t c_chJNTMjpg[116103];
+        extern const uint8_t c_chJNTMjpg[102731];
 
         arm_tjpgd_io_binary_loader_init(&this.LoaderIO.tBinary, c_chJNTMjpg, sizeof(c_chJNTMjpg));
 
@@ -347,7 +347,7 @@ user_scene_jntm_t *__arm_2d_scene_jntm_init(   arm_2d_scene_player_t *ptDispAdap
         arm_tjpgd_loader_init(&this.tJPGBackground, &tCFG);
     } while(0);
 
-    this.tFilm = (arm_2d_helper_film_t)impl_film(this.tJPGBackground, 100, 90, 7, 69, 60);
+    this.tFilm = (arm_2d_helper_film_t)impl_film(this.tJPGBackground, 100, 90, 1, 69, 60);
 
     /* ------------   initialize members of user_scene_jntm_t end   ---------------*/
 

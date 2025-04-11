@@ -32,7 +32,7 @@
 #include "arm_2d_helper_scene.h"
 #include "arm_2d_example_controls.h"
 
-#if defined(RTE_Acceleration_Arm_2D_Extra_TJpgDec_Loader__)
+#if defined(RTE_Acceleration_Arm_2D_Extra_TJpgDec_Loader)
 #   include "arm_2d_example_loaders.h"
 #endif
 
@@ -65,10 +65,10 @@ extern "C" {
 
 
 #ifndef ARM_2D_SCENE_HISTOGRAM_USE_JPG
-#   define ARM_2D_SCENE_HISTOGRAM_USE_JPG       1
+#   define ARM_2D_SCENE_HISTOGRAM_USE_JPG       0
 #endif
 
-#if !defined(RTE_Acceleration_Arm_2D_Extra_TJpgDec_Loader__)
+#if !defined(RTE_Acceleration_Arm_2D_Extra_TJpgDec_Loader)
 #   undef  ARM_2D_SCENE_HISTOGRAM_USE_JPG
 #   define ARM_2D_SCENE_HISTOGRAM_USE_JPG       0
 #endif
@@ -101,7 +101,6 @@ ARM_PRIVATE(
     /* place your private member here, following two are examples */
     int64_t lTimestamp[2];
     uint8_t bUserAllocated                      : 1;
-    uint8_t bOnLoad                             : 1;
     uint8_t bIsDirtyRegionOptimizationEnabled   : 1;
 
     histogram_t tHistogram;

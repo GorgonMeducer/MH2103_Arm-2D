@@ -251,6 +251,8 @@ extern "C" {
 
 // <<< end of configuration section >>>
 
+#define ARM_2D_SCENE_METER_USE_JPG      1
+#define ARM_2D_SCENE_HISTOGRAM_USE_JPG  1
 
 /*============================ TYPES =========================================*/
 /*============================ GLOBAL VARIABLES ==============================*/
