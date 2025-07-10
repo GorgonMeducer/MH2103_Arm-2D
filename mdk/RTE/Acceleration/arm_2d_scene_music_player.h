@@ -109,7 +109,6 @@ ARM_PRIVATE(
 
     struct {
         spin_zoom_widget_t tWidget;
-        int16_t iAngle;
         int16_t iRadius;
         int16_t iPivotOffset;
         float fScaling;
@@ -125,6 +124,10 @@ ARM_PRIVATE(
     struct {
         text_box_c_str_reader_t tStringReader;
         text_box_t tTextBox;
+        uint8_t chOpacity;
+        arm_2d_size_t tSize;
+        int64_t lFullHeight;
+        int64_t lPosition;
     } Lyrics;
 
 

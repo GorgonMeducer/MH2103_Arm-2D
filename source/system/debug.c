@@ -80,11 +80,17 @@ void _sys_exit(int status)
     while(1) __NOP();
 }
 
+__WEAK
+__attribute__((noinline))
+int stdout_putchar(int ch)
+{
+    UNUSED_PARAM(ch);
+    return ch;
+}
+
 void _ttywrch(int ch)
 {
     UNUSED_PARAM(ch);
-    
-    extern int stdout_putchar(int ch);
     
     stdout_putchar(ch);
 }
@@ -151,17 +157,19 @@ char *_sys_command_string(char *cmd, int len)
 {
  return NULL;
 }
-
+#if 0
 void __aeabi_assert(const char *chCond, const char *chLine, int wErrCode) 
 {
     (void)chCond;
     (void)chLine;
     (void)wErrCode;
-	DebugPrintf("arm-2d assert: %s,%s,%d\r\n",chCond,chLine,wErrCode);
+    DebugPrintf("arm-2d assert: %s,%s,%d\r\n",chCond,chLine,wErrCode);
     while(1) {
-			
+
     }
 }
+#endif
+
 int fputc(int ch,FILE *p)
 {
 	return 0;

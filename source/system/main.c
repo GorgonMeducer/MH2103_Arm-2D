@@ -4,9 +4,8 @@
 #include "arm_2d_helper.h"
 #include "arm_2d_scenes.h"
 #include "arm_2d_disp_adapters.h"
-#include "arm_2d_disp_adapter_0.h"
-#include "arm_2d_scene_watch_face_01.h"
-#include "arm_2d_example_controls.h"
+
+#if 0
 #include "arm_2d_demos.h"
 
 #include "arm_2d_scene_knob.h"
@@ -17,6 +16,7 @@
 #include "arm_2d_scene_histogram.h"
 #include "arm_2d_scene_meter.h"
 #include "arm_2d_scene_jntm.h"
+#endif
 
 #if defined(RTE_Acceleration_Arm_2D_Extra_Benchmark)
 #   include "arm_2d_benchmark.h"
@@ -54,10 +54,10 @@ int main(void)
         //arm_2d_scene_jntm_init(&DISP0_ADAPTER);
         //arm_2d_scene_watch_face_01_init(&DISP0_ADAPTER);
         //arm_2d_scene_matrix_init(&DISP0_ADAPTER);
-        arm_2d_scene_music_player_init(&DISP0_ADAPTER);
+        //arm_2d_scene_music_player_init(&DISP0_ADAPTER);
         //arm_2d_scene_progress_status_init(&DISP0_ADAPTER);
     }
-    arm_2d_scene_player_switch_to_next_scene(&DISP0_ADAPTER);
+    //arm_2d_scene_player_switch_to_next_scene(&DISP0_ADAPTER);
     /*******************************************************************************/
 #endif
 
